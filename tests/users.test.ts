@@ -11,7 +11,7 @@ describe('Users', () => {
         service = new UserService(ApiClient.getInstance());
     });
 
-    it('Get all users', async () => {
+    it('Get all', async () => {
         const response = await service.fetch();
 
         const users = response.data;
@@ -22,7 +22,7 @@ describe('Users', () => {
         expect(users[0]?.email).toBeTypeOf('string');
     });
 
-    it('Get user by id', async () => {
+    it('Get by id', async () => {
         const id = 1;
         const response = await service.find(id);
 
@@ -33,7 +33,7 @@ describe('Users', () => {
         expect(user.email).toBeTypeOf('string');
     });
 
-    it('Create new user', async () => {
+    it('Create new', async () => {
         const user: Omit<User, "id"> = { name: 'John Doe', email: "john.doe@test.com" }
         const response = await service.create(user);
 
