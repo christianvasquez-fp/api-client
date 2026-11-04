@@ -1,23 +1,30 @@
 # api-client
 
-To install dependencies:
+Lightweight TypeScript HTTP client built with Axios and Bun. Demonstrates a singleton `ApiClient` wrapper and a typed `UserService` for fetching, finding, and creating users against the JSONPlaceholder API.
+
+## Getting Started
+
+Install dependencies:
 
 ```bash
 bun install
 ```
 
-To run:
+Run the example script:
 
 ```bash
 bun run index.ts
 ```
 
-To type check:
+Type check:
 
 ```bash
 bun check
 ```
 
-Run `bun fmt` to format the code.
+Format code:
 
-This project was created using `bun init` in bun v1.4.4. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+```bash
+bun fmt
+```
+
