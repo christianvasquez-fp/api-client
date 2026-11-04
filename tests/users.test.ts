@@ -4,7 +4,7 @@ import ApiClient from '../src/ApiClient';
 import type { User } from '../src/User';
 import type { NewUser } from '../src/NewUser';
 
-describe('Users', () => {
+describe('User Service', () => {
     let service: UserService;
 
     beforeEach(() => {
