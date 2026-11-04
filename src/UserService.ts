@@ -1,3 +1,4 @@
+import type { NewUser } from './NewUser';
 import type ApiClient from "./ApiClient";
 import type { User } from "./User";
 
@@ -13,6 +14,6 @@ export default class UserService {
     }
 
     create(data: Omit<User, 'id'>) {
-        return this.client.post<User, Omit<User, 'id'>>('users', data);
+        return this.client.post<NewUser, Omit<User, 'id'>>('users', data);
     }
 }
