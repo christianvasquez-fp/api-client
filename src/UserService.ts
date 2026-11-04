@@ -16,4 +16,12 @@ export default class UserService {
     create(data: Omit<User, 'id'>) {
         return this.client.post<NewUser, Omit<User, 'id'>>('users', data);
     }
+
+    update(id: number, data: Omit<User, 'id'>) {
+        return this.client.put<NewUser, Omit<User, 'id'>>(`users/${id}`, data);
+    }
+
+    delete(id: number) {
+        return this.client.delete(`users/${id}`);
+    }
 }

@@ -22,4 +22,12 @@ export default class ApiClient {
     post<T, D>(endpoint: string, data: D) {
         return axios.post<T>(`${this.url}/${endpoint}`, { data });
     }
+
+    put<T, D>(endpoint: string, data: D) {
+        return axios.put<T>(`${this.url}/${endpoint}`, { data });
+    }
+
+    delete<T = Record<string, never>>(endpoint: string) {
+        return axios.delete<T>(`${this.url}/${endpoint}`);
+    }
 }
