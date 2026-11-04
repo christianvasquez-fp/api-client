@@ -11,7 +11,7 @@ describe('Users', () => {
         service = new UserService(ApiClient.getInstance());
     });
 
-    it('Get all', async () => {
+    it('should get all', async () => {
         const response = await service.fetch();
 
         const users = response.data;
@@ -22,7 +22,7 @@ describe('Users', () => {
         expect(users[0]?.email).toBeTypeOf('string');
     });
 
-    it('Get by id', async () => {
+    it('should get one by id', async () => {
         const id = 1;
         const response = await service.find(id);
 
@@ -33,7 +33,7 @@ describe('Users', () => {
         expect(user.email).toBeTypeOf('string');
     });
 
-    it('Create new', async () => {
+    it('should create a new one', async () => {
         const user: Omit<User, "id"> = { name: 'John Doe', email: "john.doe@test.com" }
         const response = await service.create(user);
 
@@ -44,7 +44,7 @@ describe('Users', () => {
         expect(created.data.email).toBe(user.email);
     });
 
-    it('Update by id', async () => {
+    it('should update one by id', async () => {
         const id = 1;
         const user: Omit<User, "id"> = { name: 'Jane Doe', email: "jane.doe@test.com" };
         const response = await service.update(id, user);
@@ -56,7 +56,7 @@ describe('Users', () => {
         expect(updated.data.email).toBe(user.email);
     });
 
-    it('Delete by id', async () => {
+    it('should delete one by id', async () => {
         const id = 1;
         const response = await service.delete(id);
 
