@@ -13,18 +13,6 @@ bun install
 Run the example script:
 
 ```bash
-bun run index.ts
-```
-
-Type check:
-
-```bash
-bun check
-```
-
-Format code:
-
-```bash
-bun fmt
+bun index.ts
 ```
 
