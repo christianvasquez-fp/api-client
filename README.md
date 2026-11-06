@@ -13,6 +13,8 @@ bun install
 Run the example script:
 
 ```bash
-bun index.ts
+bun dev # has the --watch flag
+# or
+bun start
 ```
 
